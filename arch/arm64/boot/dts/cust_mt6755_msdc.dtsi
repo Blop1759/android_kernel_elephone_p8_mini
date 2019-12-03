@@ -37,7 +37,8 @@
 	pinctl_ddr50 = <&mmc1_pins_ddr50>;
 	register_setting = <&mmc1_register_setting_default>;
 	host_function = /bits/ 8 <MSDC_SD>;
-	cd_level = /bits/ 8 <MSDC_CD_LOW>;
+	/*cd_level = /bits/ 8 <MSDC_CD_LOW>;*/
+	cd_level = /bits/ 8 <1>;
 	cd-gpios = <&pio 83 0>;
 	status = "okay";
 	vmmc-supply = <&mt_pmic_vmch_ldo_reg>;
@@ -86,7 +87,8 @@
 		datwrddly      = /bits/ 8 <0>;
 		cmdrrddly      = /bits/ 8 <0>;
 		cmdrddly       = /bits/ 8 <0>;
-		cmd_edge = /bits/ 8 <MSDC_SMPL_FALLING>;
+		/*cmd_edge = /bits/ 8 <MSDC_SMPL_FALLING>;*/
+		cmd_edge = /bits/ 8 <0>;
 		rdata_edge = /bits/ 8 <MSDC_SMPL_FALLING>;
 		wdata_edge = /bits/ 8 <MSDC_SMPL_FALLING>;
 	};

@@ -118,7 +118,7 @@
          polling_mode_als        = <1>;
          power_id                = <0xffff>;
          power_vol               = <0>;
-         als_level = <1 200 300 500 600 1000 2000 3000 5000 28430 33274 47116 57694 57694 65535>;
+         als_level = <2 20 78 240 320 530 900 1200 1400 1700 2000 2500 3000 12694 35535>;
          als_value = <0 133 304 502 1004 2005 3058 5005 8008 10010 12000 16000 20000 20000 20000 20000>;
          ps_threshold_high       = <200>;
          ps_threshold_low        = <100>;
@@ -134,7 +134,7 @@
 		polling_mode_als = <1>;
 		power_id = <0xffff>;
 		power_vol = <0>;
-                als_level  =  <0 400 900 1500 2325 3421 5067 6621 7062 8430 13274 27116 37694 57694 65535>;
+                als_level  =  <10 400 900 1500 2325 3421 5067 6621 7062 8430 13274 27116 37694 57694 65535>;
                 als_value  =  <0 133 304 502 1004 2005 3058 4005 5008 6010 8000 12000 18000 20000 20000 20000>;
 		ps_threshold_high		=  <200>;
 		ps_threshold_low		=  <100>;
@@ -1082,14 +1082,14 @@
 	                   bias-disable;
                    };
                };
-    vanzo_fp_ldo1v8_on: state_fp_ldo1v8_on{
+    vanzo_fp_ldo1v8_off: state_fp_ldo1v8_on{
                    pins_cmd_dat {
                        pins = <PINMUX_GPIO16__FUNC_GPIO16>;
                        slew-rate = <1>;
                        output-high;
                    };
                };
-    vanzo_fp_ldo1v8_off: state_fp_ldo1v8_off{
+    vanzo_fp_ldo1v8_on: state_fp_ldo1v8_off{
                    pins_cmd_dat {
                        pins = <PINMUX_GPIO16__FUNC_GPIO16>;
                        slew-rate = <1>;
@@ -1141,6 +1141,43 @@
                        output-low;
                    };
                };
+    /* elephone p8_mini */   
+    vanzo_lcm_mode_default: lcm_mode_default {
+		};
+		
+			vanzo_enp0: enp@0 {
+				pins_cmd_dat {
+					pins = <0x1600>;
+					slew-rate = <0x1>;
+					output-low;
+				};
+			};
+
+			vanzo_enp1: enp@1 {
+				pins_cmd_dat {
+					pins = <0x1600>;
+					slew-rate = <0x1>;
+					output-high;
+				};
+			};
+
+			vanzo_enn0: enn@0 {
+				pins_cmd_dat {
+					pins = <0x3e00>;
+					slew-rate = <0x1>;
+					output-low;
+				};
+			};
+
+			vanzo_enn1: enn@1 {
+				pins_cmd_dat {
+					pins = <0x3e00>;
+					slew-rate = <0x1>;
+					output-high;
+				};
+			};
+			
+    
 };
 &led5 {
 	pinctrl-names = "default", "gpio_button_on", "gpio_button_off";

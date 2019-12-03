@@ -270,7 +270,9 @@
 		spm-reserve-memory {
 			compatible = "mediatek,spm-reserve-memory";
 			no-map;
-			size = <0 0xe000>; /* PCM_FIRMWARE_SIZE * DYNA_LOAD_PCM_MAX = 8K * 7 */
+			/* elephone p8_mini 
+			size = <0 0xe000>;*/ /* PCM_FIRMWARE_SIZE * DYNA_LOAD_PCM_MAX = 8K * 7 */
+			size = <0 0x20000>;
 			alignment = <0 0x10000>;
 			alloc-ranges = <0 0x40000000 0 0x60000000>;
 		};
@@ -1489,11 +1491,11 @@
 			reg-names = "ssusb_base", "ssusb_sif", "ssusb_sif2";
 			interrupts = <GIC_SPI 123 IRQ_TYPE_LEVEL_LOW>;
 			interrupt-names = "xhci";
-			eint_usb_iddig@28 {
+			eint_usb_iddig@42 {
 				compatible = "mediatek,usb_iddig_bi_eint";
 				interrupt-parent = <&eintc>;
-				interrupts = <28 IRQ_TYPE_LEVEL_LOW>;
-				debounce = <28 0>;
+				interrupts = <42 IRQ_TYPE_LEVEL_LOW>;
+				debounce = <42 0>;
 			};
 		};
 
@@ -3121,10 +3123,29 @@
 	swtp: swtp {
 		compatible = "mediatek, swtp-eint";
 	};
+	
+	/* elephone p8_mini */
+	lcm_mode: lcm_mode {
+		compatible = "mediatek,lcm_mode";
+		pinctrl-names = "default", "lcd_bias_enp0_gpio", "lcd_bias_enp1_gpio", "lcd_bias_enn0_gpio", "lcd_bias_enn1_gpio";
+		pinctrl-0 = <&vanzo_lcm_mode_default>;
+		pinctrl-1 = <&vanzo_enp0>;
+		pinctrl-2 = <&vanzo_enp1>;
+		pinctrl-3 = <&vanzo_enn0>;
+		pinctrl-4 = <&vanzo_enn1>;
+		status = "okay";
+	};
+	
 
   	fingerprint: fingerprint {
        	compatible = "mediatek, fingerprint-eint";
    	};
+   	
+   	/* elephone p8_mini : why ??? */
+   	hct_finger {
+		compatible = "mediatek,hct_finger";
+	};
+   	
    	vanzo_fp: vanzo_fp {
        	compatible = "mediatek,vanzo-fp";
    	};
@@ -3145,6 +3166,17 @@
 
 	ext_buck_vmd1:ext_buck_vmd1 {
 		compatible = "mediatek,ext_buck_vmd1";
+	};
+
+/* elephone p8_mini */
+	rt5081_pmu_eint {
+	};
+
+	rt5081_pd_eint {
+	};
+
+	rt-pd-manager {
+		compatible = "mediatek,rt-pd-manager";
 	};
 
     halldriver: hall_driver {

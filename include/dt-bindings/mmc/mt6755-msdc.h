@@ -21,6 +21,10 @@
 
 #define MSDC_CD_HIGH        (1)
 #define MSDC_CD_LOW         (0)
+/* elephone p8_mini */
+/* #define MSDC_CD_LOW         (1) */
+/* but seems to be weird ? */
+/* fin elephone p8_mini */
 
 #define	MSDC50_CLKSRC_26MHZ	(0)
 #define	MSDC50_CLKSRC_400MHZ	(1)
