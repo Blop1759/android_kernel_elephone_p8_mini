@@ -1,0 +1,74 @@
+#
+#Fingerprint
+#
+menu "Fingerprint support"
+	depends on INPUT
+
+config MTK_FINGERPRINT_SUPPORT
+	bool "Mediatek Fingerprint"
+	default n
+	---help---
+	Fingerprint mtk driver enable/disable in the kernel.
+	Say Y here if you want to use mediatek fingerprint driver,
+	fingerprint driver will support fingerprint function
+
+if MTK_FINGERPRINT_SUPPORT
+config MTK_FINGERPRINT_SELECT
+	string "sensor type"
+	default "XXX"
+
+
+config FPC_REE_FINGERPRINT
+	bool "FPC ree Fingerprint"
+	default n
+	---help---
+	FPC ree fingerprint FPC's 102x/104x device.
+
+if MTK_FINGERPRINT_SELECT = "FPC1145"
+config FPC_FINGERPRINT
+	bool "FPC Fingerprint"
+	default n
+	---help---
+	FPC fingerprint FPC's 102x/104x device.
+endif
+
+if MTK_FINGERPRINT_SELECT = "GF318M"
+config GOODIX_FINGERPRINT
+	bool "Goodix Fingerprint"
+	default n
+	---help---
+	Goodix Fingerprint chip GF316M/GF318M/GF3118M/GF518M/GF5118M/GF516M/GF816M/GF3208/GF5216 TEE driver
+
+config GOODIX_SENSOR_TYPE
+	string "SENSOR_TYPE"
+	default "GF318M"
+	---help---
+	Must input sensor type, or default is GF316M GF318M GF3118M GF518M GF5118M GF516M GF816M GF3208 GF5216
+endif
+
+if MTK_FINGERPRINT_SELECT = "SUNWAVECORP"
+config SUNWAVECORP_FINGERPRINT
+	bool "Sunwave Fingerprint"
+	default y
+	---help---
+	Sunwave fingerprint.
+endif
+
+if MTK_FINGERPRINT_SELECT = "ET310"
+config ET310_FINGERPRINT
+	bool "ET310/ET320 Fingerprint"
+	default y
+	---help---
+	ET310/ET320 fingerprint.
+endif
+
+if MTK_FINGERPRINT_SELECT = "GF3258"
+config GF3258_FINGERPRINT
+	bool "gf3258 Fingerprint"
+	default y
+	---help---
+	gf3258 fingerprint.
+endif
+
+endif
+endmenu
