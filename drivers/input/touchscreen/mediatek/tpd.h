@@ -205,7 +205,7 @@ void _tpd_switch_normal_mode(void);
 #if (defined(WVGA) || defined(CU_WVGA) || defined(CMCC_WVGA) || defined(CMCC_LTE_WVGA))
 
 #define CFG_TPD_KEY_COUNT           4
-#define CFG_TPD_KEYS                {KEY_BACK, KEY_HOMEPAGE, KEY_MENU, 0}
+#define CFG_TPD_KEYS                {KEY_MENU, KEY_HOMEPAGE, KEY_BACK, 0}
 #define CFG_TPD_KEYS_DIM            {{60,870,60,50},{180,870,60,50},{300,870,60,50},{420,870,60,50}}
 #define CFG_TPD_WIDTH               480
 #define CFG_TPD_HEIGHT              800
@@ -213,7 +213,7 @@ void _tpd_switch_normal_mode(void);
 #elif (defined(FWVGA) || defined(CU_FWVGA) || defined(CMCC_FWVGA) || defined(CMCC_LTE_FWVGA))
 
 #define CFG_TPD_KEY_COUNT           4
-#define CFG_TPD_KEYS                {KEY_BACK, KEY_HOMEPAGE, KEY_MENU, 0}
+#define CFG_TPD_KEYS                {KEY_MENU, KEY_HOMEPAGE, KEY_BACK, 0}
 #define CFG_TPD_KEYS_DIM            {{60,920,60,50},{180,920,60,50},{300,920,60,50},{420,920,60,50}}
 #define CFG_TPD_WIDTH               480
 #define CFG_TPD_HEIGHT              854
@@ -221,7 +221,7 @@ void _tpd_switch_normal_mode(void);
 #elif (defined(QHD) || defined(CU_QHD) || defined(CMCC_QHD) || defined(CMCC_LTE_QHD))
 
 #define CFG_TPD_KEY_COUNT           4
-#define CFG_TPD_KEYS                {KEY_BACK, KEY_HOMEPAGE, KEY_MENU, 0}
+#define CFG_TPD_KEYS                {KEY_MENU, KEY_HOMEPAGE, KEY_BACK, 0}
 #define CFG_TPD_KEYS_DIM            {{85,1030,60,50},{185,1030,60,50},{350,1030,60,50},{500,1030,60,50}}
 #define CFG_TPD_WIDTH               540
 #define CFG_TPD_HEIGHT              960
@@ -237,7 +237,7 @@ void _tpd_switch_normal_mode(void);
 #elif (defined(FHD) || defined(CU_FHD) || defined(CMCC_FHD) || defined(CMCC_LTE_FHD))
 
 #define CFG_TPD_KEY_COUNT           4
-#define CFG_TPD_KEYS                {KEY_BACK, KEY_HOMEPAGE, KEY_MENU, 0}
+#define CFG_TPD_KEYS                {KEY_MENU, KEY_HOMEPAGE, KEY_BACK, 0}
 #define CFG_TPD_KEYS_DIM            {{200,2100,100,100},{500,2100,100,100},{800,2100,100,100}}
 #define CFG_TPD_WIDTH               1080
 #define CFG_TPD_HEIGHT              1920
@@ -245,7 +245,7 @@ void _tpd_switch_normal_mode(void);
 #elif (defined(HVGA))
 
 #define CFG_TPD_KEY_COUNT           4
-#define CFG_TPD_KEYS                {KEY_BACK, KEY_HOMEPAGE, KEY_MENU, 0}
+#define CFG_TPD_KEYS                {KEY_MENU, KEY_HOMEPAGE, KEY_BACK, 0}
 #define CFG_TPD_KEYS_DIM            {{40,530,60,50},{120,530,60,50},{200,530,60,50},{280,530,60,50}}
 #define CFG_TPD_WIDTH               320
 #define CFG_TPD_HEIGHT              480
@@ -253,7 +253,7 @@ void _tpd_switch_normal_mode(void);
 #elif (defined(LQHD))
 
 #define CFG_TPD_KEY_COUNT           4
-#define CFG_TPD_KEYS                {KEY_BACK, KEY_HOMEPAGE, KEY_MENU, 0}
+#define CFG_TPD_KEYS                {KEY_MENU, KEY_HOMEPAGE, KEY_BACK, 0}
 #define CFG_TPD_KEYS_DIM            {{50,1030,60,50},{185,1030,60,50},{350,1030,60,50},{500,1030,60,50}}
 #define CFG_TPD_WIDTH               540
 #define CFG_TPD_HEIGHT              960
@@ -261,7 +261,7 @@ void _tpd_switch_normal_mode(void);
 #else
 
 #define CFG_TPD_KEY_COUNT           4
-#define CFG_TPD_KEYS                {KEY_BACK, KEY_HOMEPAGE, KEY_MENU, 0}
+#define CFG_TPD_KEYS                {KEY_MENU, KEY_HOMEPAGE, KEY_BACK, 0}
 #define CFG_TPD_KEYS_DIM            {{60,920,60,50},{180,920,60,50},{300,920,60,50},{420,920,60,50}}
 #define CFG_TPD_WIDTH               480
 #define CFG_TPD_HEIGHT              854

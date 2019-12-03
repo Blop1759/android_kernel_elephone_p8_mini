@@ -632,10 +632,11 @@ static s32 tpd_i2c_probe(struct i2c_client *client, const struct i2c_device_id *
 	/*int count = 0;*/
 
 	GTP_INFO("tpd_i2c_probe start.");
-#ifdef CONFIG_MTK_BOOT
-	if (RECOVERY_BOOT == get_boot_mode())
-		return 0;
-#endif
+//why the hell no touchscreen on recovery ???
+//#ifdef CONFIG_MTK_BOOT
+//	if (RECOVERY_BOOT == get_boot_mode())
+//		return 0;
+//#endif
 	probe_thread = kthread_run(tpd_registration, (void *)client, "tpd_probe");
 	if (IS_ERR(probe_thread)) {
 		err = PTR_ERR(probe_thread);
