@@ -101,7 +101,7 @@ typedef enum {
 ********************************************************************************/
 
 /*  */
-#define MAX_NUM_OF_SUPPORT_SENSOR 16
+#define MAX_NUM_OF_SUPPORT_SENSOR 20
 /*  */
 #define SENSOR_CLOCK_POLARITY_HIGH    0
 #define SENSOR_CLOCK_POLARITY_LOW 1
@@ -1192,6 +1192,12 @@ typedef struct {
 	MUINT32 u4SrcW;     /* For input sensor width */
 	MUINT32 u4SrcH;     /* For input sensor height */
 } ACDK_SENSOR_JPEG_INFO;
+
+typedef struct {
+	MUINT32 (*SensorOpen)(void);
+	MUINT32 (*Sensorreadshutter)(void);
+	MUINT32 (*SensorGetID)(void);
+} SENSOR_FUNCTION_STRUCT_1;
 
 
 #endif              /* _KD_IMGSENSOR_DATA_H */
