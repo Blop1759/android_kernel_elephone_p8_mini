@@ -267,6 +267,7 @@ extern LCM_DRIVER nt35595_fhd_dsi_cmd_truly_nt50358_720p_extern_lcm_drv;
 extern LCM_DRIVER nt35695_fhd_dsi_vdo_truly_nt50358_720p_lcm_drv;
 extern LCM_DRIVER ft8707_fhd_dsi_vdo_lgd_drv;
 extern LCM_DRIVER nt35532_sharp55_huayi_fhd_lcm_drv;
+extern LCM_DRIVER hx8399c_sharp50_jsj_fhd_lcm_drv;
 
 #ifdef BUILD_LK
 extern void mdelay(unsigned long msec);

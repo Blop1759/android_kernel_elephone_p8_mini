@@ -42,6 +42,11 @@ LCM_DRIVER *lcm_driver_list[] = {
 #if defined(NT35532_SHARP55_HUAYI_FHD)
 	&nt35532_sharp55_huayi_fhd_lcm_drv,
 #endif
+
+#if defined(HX8399C_SHARP50_JSJ_FHD)
+	&hx8399c_sharp50_jsj_fhd_lcm_drv,
+#endif
+
 #if defined(NT35532_SHARP55_JSJ_FHD)
 	&nt35532_sharp55_jsj_fhd_lcm_drv,
 #endif
