@@ -29,7 +29,7 @@ endef
 MTK_PLATFORM := $(subst ",,$(CONFIG_MTK_PLATFORM))
 ARCH_MTK_PROJECT := $(subst ",,$(CONFIG_ARCH_MTK_PROJECT))
 
-obj-y				+= kd_sensorlist.o
+#obj-y				+= kd_sensorlist.o
 
 $(info -= project path  $(srctree)/drivers/misc/mediatek/imgsensor/src/$(MTK_PLATFORM)/camera_project/$(ARCH_MTK_PROJECT)/ =-)
 
@@ -39,6 +39,14 @@ $(info by porject kd_camera_hw)
 else
 obj-y                           += camera_hw/
 endif
+
+ifneq ($(wildcard $(srctree)/drivers/misc/mediatek/imgsensor/src/$(MTK_PLATFORM)/camera_project/$(ARCH_MTK_PROJECT)/kd_sensorlist.c),)
+obj-y				+= camera_project/$(ARCH_MTK_PROJECT)/kd_sensorlist.o
+$(info by porject kd_camera_hw)
+else
+obj-y                           += kd_sensorlist.o
+endif
+
 
 $(foreach drv,$(subst $\",,$(CONFIG_CUSTOM_KERNEL_IMGSENSOR)),$(eval $(call FILTER_PROJECT_DRV,$(drv))))
 custom_kernel_imgsensor_by_platform := $(addsuffix /, $(shell echo $(platform_drv)))
@@ -58,10 +66,10 @@ endif
 # End of Vanzo:wangfei
 # Vanzo:yucheng on: Sat, 16 Jan 2016 17:58:29 +0800
 # Modified for camera customization
-#obj-y += $(custom_kernel_imgsensor_by_platform)
-#obj-y += $(custom_kernel_imgsensor_by_project)
+obj-y += $(custom_kernel_imgsensor_by_platform)
+obj-y += $(custom_kernel_imgsensor_by_project)
 
-obj-y += $(custom_kernel_imgsensor)
+#obj-y += $(custom_kernel_imgsensor)
 # End of Vanzo: yucheng
 $(info imgsensor drv by platform $(platform_drv))
 $(info imgsensor drv by project $(project_drv))
