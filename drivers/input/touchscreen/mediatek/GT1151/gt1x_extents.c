@@ -45,7 +45,7 @@
 #define GESTURE_MAX_POINT_COUNT    64
 
 #pragma pack(1)
-struct {
+typedef struct {
 	u8 ic_msg[6];		/*from the first byte */
 	u8 gestures[4];
 	u8 data[3 + GESTURE_MAX_POINT_COUNT * 4 + 80];	/*80 bytes for extra data */
