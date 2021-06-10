@@ -1,0 +1,14 @@
+s5k3p3sxmipiraw_Sensor.c:1114:19:get_resolution	32	static
+s5k3p3sxmipiraw_Sensor.c:1135:19:get_info	32	static
+s5k3p3sxmipiraw_Sensor.c:234:13:write_cmos_sensor	48	static
+s5k3p3sxmipiraw_Sensor.c:248:13:write_cmos_sensor_8	48	static
+s5k3p3sxmipiraw_Sensor.c:554:13:preview_setting	16	static
+s5k3p3sxmipiraw_Sensor.c:240:19:read_cmos_sensor_8	64	static
+s5k3p3sxmipiraw_Sensor.c:950:19:close	16	static
+s5k3p3sxmipiraw_Sensor.c:410:13:set_mirror_flip	64	static
+s5k3p3sxmipiraw_Sensor.c:977:19:preview.isra.5	32	static
+s5k3p3sxmipiraw_Sensor.c:1233:19:control	64	static
+s5k3p3sxmipiraw_Sensor.c:879:19:open	144	static
+s5k3p3sxmipiraw_Sensor.c:263:13:set_max_framerate	112	static
+s5k3p3sxmipiraw_Sensor.c:1431:19:feature_control	144	static
+s5k3p3sxmipiraw_Sensor.c:1612:8:S5K3P3SX_MIPI_RAW_SensorInit	0	static

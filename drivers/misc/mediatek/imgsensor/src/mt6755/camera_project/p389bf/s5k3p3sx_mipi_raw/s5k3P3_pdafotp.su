@@ -1,0 +1,3 @@
+s5k3P3_pdafotp.c:54:13:_read_3P3_eeprom.constprop	128	static
+s5k3P3_pdafotp.c:70:6:read_3P3_eeprom	32	static
+s5k3P3_pdafotp.c:92:6:read_3P3_eeprom_vendorinfo	48	static
